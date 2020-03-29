@@ -5,15 +5,20 @@
 #include <list>
 #include<fstream>
 #include "Partners.h"
+#include"Bonus_tasks.h"
 using namespace std;
-// 5 hours +8,5h
 
 int main()
 {
-	int choise = 0;
-	do {
-		choise = init(); // повторюємо введення допоки не буде знайдено файл (поки ініт не поверне 0)
-	} while (choise);
+	/*converting_text();*/
+	/*translyt();*/
+
+	
+
+	int choise = 0;   
+	
+	init(); 
+	
 
 	do {
 		cout << "1. Add a partner \n2. Redact \n3. Delete a partner \n4. Search\n5. Save changes\n0. Exit\n";
@@ -43,6 +48,7 @@ int main()
 		}
 
 	} while (choise != 0);
+	exit_init(0);
 	exit_init(1);
 
 

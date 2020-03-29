@@ -124,10 +124,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bonus_tasks.cpp" />
     <ClCompile Include="Partners.cpp" />
     <ClCompile Include="Source2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bonus_tasks.h" />
     <ClInclude Include="Partners.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -4,7 +4,6 @@
 #include<fstream>
 #include<list>
 
-	using std::list;
 	using std::string;
 	using std::cout;
 	using std::cin;
@@ -20,7 +19,7 @@
 	
 	
 	void redact();
-	int init();
+	void init();
 	void adding(int mode, int ind);
 	void exit_init(bool mode);
 	void deleting();

@@ -21,9 +21,15 @@
     <ClCompile Include="Partners.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Bonus_tasks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Partners.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bonus_tasks.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

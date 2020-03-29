@@ -31,18 +31,14 @@ void temping(bool mode,int ind) //
 }
 
 
-int init()
+void init()
 {
 	cout << "Enter file name: ";
 	cin >> filename;
 	filename += ".txt";       // дозволяє вводити назву без розширення
-	fstream fs(filename);
-	if (!fs) {
-		cout << "Not found!" << endl;
-		return 1;  
-	}
-
+	std::fstream fs(filename);
 	part temp;
+	
 	string buff = "";
 	while (!fs.eof()) {
 		buff = "";
@@ -58,7 +54,6 @@ int init()
 		partner[count - 1] = temp;
 	}
 	fs.close();
-	return 0;
 }
 
 void adding(int mode,int ind) // функція редагування була практично ідентична до цієї, різлиця лише в індексі масиву
@@ -71,8 +66,7 @@ void adding(int mode,int ind) // функція редагування була практично ідентична до
 	if(!mode)index = ind;
 	else index = count - 1;
 	cin.ignore();
-	getline(cin,partner[index].surname);
-	cout << "And surname: ";
+	cout << "Add surname: ";
 	getline(cin, partner[index].surname);
 	cout << "Enter name: ";
 	getline(cin, partner[index].name);
@@ -168,10 +162,7 @@ void searching() {
 		name += ".txt";
 		std::ofstream ff;
 		ff.open(name);
-		if (!ff.is_open()) {
-			cout << "Wrong name!" << endl;
-			return;
-		}
+		
 		for (int i = 0; i < count; i++) {
 			if (bufer == partner[i].age || bufer[0] == partner[i].surname[0]) {
 					ff << partner[i].surname << endl;
